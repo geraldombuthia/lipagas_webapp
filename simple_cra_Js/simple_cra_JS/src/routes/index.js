@@ -9,6 +9,7 @@ import DashboardLayout from '../layouts/dashboard';
 import { PATH_AFTER_LOGIN } from '../config-global';
 //
 import {
+  CreateAccount,
   Page404,
   PageOne,
   PageTwo,
@@ -35,6 +36,13 @@ export default function Router() {
             </GuestGuard>
           ),
         },
+        { path: 'createaccount', 
+        element: (
+          <GuestGuard>
+            <CreateAccount />
+          </GuestGuard>
+        ) 
+      },
       ],
     },
     {
@@ -46,6 +54,11 @@ export default function Router() {
       ),
       children: [
         { element: <Navigate to={PATH_AFTER_LOGIN} replace />, index: true },
+        // Added routes
+        { path: 'createaccount', element: <CreateAccount /> },
+        // { path: 'enternumber', element: <EnterNumber /> },
+        // { path: 'enter2fAuth', element: <EnterNumber /> },
+        // Added routes
         { path: 'one', element: <PageOne /> },
         { path: 'two', element: <PageTwo /> },
         { path: 'three', element: <PageThree /> },

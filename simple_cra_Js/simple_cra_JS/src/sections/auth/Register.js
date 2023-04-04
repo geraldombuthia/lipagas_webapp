@@ -8,27 +8,26 @@ import { useAuthContext } from '../../auth/useAuthContext';
 // layouts
 import LoginLayout from '../../layouts/login';
 //
-import AuthLoginForm from './AuthLoginForm';
+import AuthSignInForm from './AuthSignInForm';
 import AuthWithSocial from './AuthWithSocial';
 
 
 // ----------------------------------------------------------------------
 
 
-export default function Login() {
+export default function Register() {
   const { method } = useAuthContext();
 
   return (
     <LoginLayout>
       <Stack spacing={2} sx={{ mb: 5, position: 'relative' }}>
-        <Typography variant="h4">Sign in to Minimal</Typography>
+        <Typography variant="h4">Enter your Phone number to Sign Up</Typography>
 
         <Stack direction="row" spacing={0.5}>
-          <Typography variant="body2">New user?</Typography>
+          <Typography variant="body2">Already have an account</Typography>
 
-          <Link variant="subtitle2" component={RouterLink} to="/createaccount">Create an account</Link>
+          <Link variant="subtitle2" component={RouterLink} to="/login">Go to login</Link>
         </Stack>
-
         <Tooltip title={method} placement="left">
           <Box
             component="img"
@@ -39,11 +38,7 @@ export default function Login() {
         </Tooltip>
       </Stack>
 
-      <Alert severity="info" sx={{ mb: 3 }}>
-        Use email : <strong>demo@minimals.cc</strong> / password :<strong> demo1234</strong>
-      </Alert>
-
-      <AuthLoginForm />
+      <AuthSignInForm />
 
       <AuthWithSocial />
     </LoginLayout>

@@ -3,7 +3,8 @@ import { Suspense, lazy } from 'react';
 import LoadingScreen from '../components/loading-screen';
 
 // ----------------------------------------------------------------------
-
+//Routes to be added
+// *create-account
 const Loadable = (Component) => (props) =>
   (
     <Suspense fallback={<LoadingScreen />}>
@@ -14,6 +15,12 @@ const Loadable = (Component) => (props) =>
 // ----------------------------------------------------------------------
 
 export const LoginPage = Loadable(lazy(() => import('../pages/LoginPage')));
+
+// My added routes
+
+export const CreateAccount = Loadable(lazy(() => import('../pages/CreateAccount')));
+
+// End of added routes
 
 export const PageOne = Loadable(lazy(() => import('../pages/PageOne')));
 export const PageTwo = Loadable(lazy(() => import('../pages/PageTwo')));

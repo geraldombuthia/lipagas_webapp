@@ -37,4 +37,6 @@ Projects starting point this is where all the code aggregates to
 ### * index.js
 This injects the code to the index.html file to complete the design of a single page application
 
+## Documentation
+For help and in depth understanding of how the template is developed and functions, you can read the documentation [here](https://docs.minimals.cc/routing/create-react-app). This contains the full information on the development process.
 
