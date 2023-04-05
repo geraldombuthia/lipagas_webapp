@@ -77,6 +77,7 @@ export default function AuthLoginForm() {
             ),
           }}
         /> */}
+        <MuiPhoneNumber defaultCountry='ke' />
       </Stack>
 
       <Stack alignItems="flex-end" sx={{ my: 2 }}>

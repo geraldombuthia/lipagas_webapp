@@ -24,7 +24,7 @@ export default function Register() {
         <Typography variant="h4">Enter your Phone number to Sign Up</Typography>
 
         <Stack direction="row" spacing={0.5}>
-          <Typography variant="body2">Already have an account</Typography>
+          <Typography variant="body2">Already have an account? </Typography>
 
           <Link variant="subtitle2" component={RouterLink} to="/login">Go to login</Link>
         </Stack>
@@ -37,9 +37,7 @@ export default function Register() {
           />
         </Tooltip>
       </Stack>
-
       <AuthSignInForm />
-
       <AuthWithSocial />
     </LoginLayout>
   );
